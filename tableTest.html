@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .heart {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+            transform: rotate(-45deg);
+        }
+
+        .heart::after {
+            background-color: pink;
+            content: "-After";
+            border-radius: 50%;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0px;
+            left: 50px;
+            transform: rotate(45deg);
+        }
+
+        .heart::before {
+            content: "Before";
+            background-color: pink;
+            border-radius: 50%;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            left: 0px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <h1>this header works</h1>
+        <p>this paragraph works but is only average at best.</p>
+    </div>
+    <div class="heart">where is this text lol
+        <p>hello this text appears to be following the css of the rectangle</p>
+    </div>
+    <div class="heart::after">this references heart::after and its not doing anything</div>
+</body>
+
+
+</html>
